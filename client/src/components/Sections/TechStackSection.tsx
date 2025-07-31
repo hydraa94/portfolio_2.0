@@ -68,7 +68,7 @@ export const TechStackSection = () => {
                     <img
                       src={tabIcons[categoryKey]}
                       alt={label}
-                      className="w-6 h-6"
+                      className="w-7 h-7"
                     />
                   </button>
                 );
@@ -80,14 +80,14 @@ export const TechStackSection = () => {
           <div className="bg-white rounded-b-xl shadow-lg border border-gray-200 border-t-0 p-8 min-h-[400px]">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold text-gray-800 text-center flex items-center justify-center gap-3">
-                <img src={tabIcons[activeTab]} className="w-6 h-6" />
+                <img src={tabIcons[activeTab]} className="w-8 h-8" />
                 {techCategories[activeTab]}
               </h3>
               <div className="w-20 h-1 bg-blue-500 mx-auto mt-3 rounded-full"></div>
             </div>
 
             {/* Skills Grid */}
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6">
               {groupedSkills[activeTab]?.map((skill) => (
                 <TechSkillCard key={skill.name} skill={skill} />
               )) || (

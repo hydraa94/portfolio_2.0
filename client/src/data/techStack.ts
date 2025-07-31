@@ -1,10 +1,27 @@
-
-
+import {
+  csharpIcon,
+  css3Icon,
+  gameOutlineIcon,
+  gitIcon,
+  githubIcon,
+  html5Icon,
+  javascriptIcon,
+  nodejsIcon,
+  reactIcon,
+  tailwindcssIcon,
+  terminalIcon,
+  unityIcon,
+  vscodeIcon,
+  firebaseIcon,
+  mysqlIcon,
+  mongoIcon,
+  nextjsIcon,
+} from "@data/icons";
 
 export interface TechSkill {
   name: string;
   icon: string;
-  category: "frontend" | "backend" | "gamedev" | "tools";
+  category: "frontend" | "backend" | "gamedev" | "tools" | "networking";
   proficiency: "beginner" | "intermediate" | "advanced";
 }
 
@@ -12,20 +29,19 @@ export const techStack: TechSkill[] = [
   // Game Development
   {
     name: "Unity",
-    icon: "🎮",
+    icon: unityIcon,
     category: "gamedev",
-    proficiency: "intermediate",
+    proficiency: "beginner",
   },
-  { name: "C#", icon: "💻", category: "gamedev", proficiency: "intermediate" },
+  {
+    name: "C#",
+    icon: csharpIcon,
+    category: "gamedev",
+    proficiency: "beginner",
+  },
   {
     name: "Game Design",
-    icon: "🎯",
-    category: "gamedev",
-    proficiency: "intermediate",
-  },
-  {
-    name: "2D Graphics",
-    icon: "🖼️",
+    icon: gameOutlineIcon,
     category: "gamedev",
     proficiency: "beginner",
   },
@@ -33,51 +49,98 @@ export const techStack: TechSkill[] = [
   // Frontend
   {
     name: "HTML5",
-    icon: "🌐",
+    icon: html5Icon,
     category: "frontend",
     proficiency: "intermediate",
   },
-  { name: "CSS3", icon: "🎨", category: "frontend", proficiency: "beginner" },
+  {
+    name: "CSS3",
+    icon: css3Icon,
+    category: "frontend",
+    proficiency: "beginner",
+  },
   {
     name: "JavaScript",
-    icon: "⚡",
+    icon: javascriptIcon,
     category: "frontend",
     proficiency: "intermediate",
   },
-  { name: "React", icon: "⚛️", category: "frontend", proficiency: "beginner" },
+  {
+    name: "React",
+    icon: reactIcon,
+    category: "frontend",
+    proficiency: "beginner",
+  },
   {
     name: "Tailwind CSS",
-    icon: "🌊",
+    icon: tailwindcssIcon,
     category: "frontend",
     proficiency: "beginner",
   },
 
   // Backend & Database
-  { name: "Python", icon: "🐍", category: "backend", proficiency: "beginner" },
-  { name: "Node.js", icon: "🟢", category: "backend", proficiency: "beginner" },
   {
-    name: "API Development",
-    icon: "🔌",
+    name: "Javascript",
+    icon: javascriptIcon,
+    category: "backend",
+    proficiency: "intermediate",
+  },
+  {
+    name: "Node.js",
+    icon: nodejsIcon,
+    category: "backend",
+    proficiency: "intermediate",
+  },
+  {
+    name: "NextJS",
+    icon: nextjsIcon,
+    category: "backend",
+    proficiency: "intermediate",
+  },
+  {
+    name: "Firebase DB",
+    icon: firebaseIcon,
+    category: "backend",
+    proficiency: "beginner",
+  },
+  {
+    name: "MySQL",
+    icon: mysqlIcon,
+    category: "backend",
+    proficiency: "beginner",
+  },
+  {
+    name: "Mongo DB",
+    icon: mongoIcon,
     category: "backend",
     proficiency: "beginner",
   },
 
   // Tools
-  { name: "Git", icon: "📝", category: "tools", proficiency: "intermediate" },
+  {
+    name: "Git",
+    icon: gitIcon,
+    category: "tools",
+    proficiency: "intermediate",
+  },
   {
     name: "GitHub",
-    icon: "🐙",
+    icon: githubIcon,
     category: "tools",
     proficiency: "intermediate",
   },
-  { name: "VS Code", icon: "💙", category: "tools", proficiency: "advanced" },
   {
-    name: "Command Line",
-    icon: "⌨️",
+    name: "VS Code",
+    icon: vscodeIcon,
+    category: "tools",
+    proficiency: "advanced",
+  },
+  {
+    name: "Terminal",
+    icon: terminalIcon,
     category: "tools",
     proficiency: "intermediate",
   },
-  { name: "Figma", icon: "🎨", category: "tools", proficiency: "beginner" },
 ];
 
 export const techCategories = {
