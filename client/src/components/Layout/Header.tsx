@@ -1,4 +1,5 @@
 import { Container } from "./Container";
+import ScrambleText from "../UI/ScrambleText";
 
 export const Header = () => {
   return (
@@ -6,7 +7,11 @@ export const Header = () => {
       <Container>
         <nav className="flex items-center justify-between py-4">
           <div className="text-xl font-bold text-gray-800">
-            {"<Nailul Autor/>"}
+            <ScrambleText
+              texts={["Nailul Autor", "Hydraa"]}
+              scrambleSpeed={100}
+              holdDuration={2000}
+            />
           </div>
           <div className="hidden md:flex space-x-5">
             <a
