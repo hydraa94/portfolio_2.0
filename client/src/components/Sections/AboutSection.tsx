@@ -4,20 +4,22 @@ import { Avatar } from "../UI/Avatar";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-white">
-      <Container className="max-w-7xl mx-auto p-14 rounded-2xl bg-white shadow-xl border-2">
+    <section id="about" className="py-20 bg-gray-50 dark:bg-slate-900">
+      <Container className="max-w-7xl mx-auto p-14 rounded-2xl bg-white dark:bg-gray-800 shadow-xl dark:shadow-slate-800 border-2 dark:border-wlate-700 ">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-shrink-0">
             <Avatar
               src="/src/assets/profile.png"
               alt="Muhammad Nailul Autor"
               size="xl"
-              className="w-48 h-48 border-2 border-gray-600 shadow-xl"
+              className="w-48 h-48 border-2 border-slate-700"
             />
           </div>
           <div className="flex-1">
-            <SectionTitle className="text-left mb-6">About Me</SectionTitle>
-            <p className="text-gray-600 text-lg leading-relaxed">
+            <SectionTitle className="text-black dark:text-gray-100 text-left mb-6">
+              About Me
+            </SectionTitle>
+            <p className="text-black dark:text-gray-100 text-lg leading-relaxed">
               I am a 11th-grade student at SMK Negeri 1 Surabaya with a passion
               for programming. I enjoy exploring new knowledge, discovering
               fresh ideas, and learning valuable lessons. Known for being

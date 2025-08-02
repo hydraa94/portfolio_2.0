@@ -3,9 +3,11 @@ import { SectionTitle } from "../UI/SectionTitle";
 
 export const GitHubActivity = () => {
   return (
-    <section id="github" className="py-20 bg-white">
+    <section id="github" className="py-20 bg-gray-50 dark:bg-slate-900">
       <Container>
-        <SectionTitle>GitHub Activities</SectionTitle>
+        <SectionTitle className="dark:text-white">
+          GitHub Activities
+        </SectionTitle>
         {/* GitHub Stats Section */}
         <div className="flex flec-col justify-center items-center mb-8">
           <img

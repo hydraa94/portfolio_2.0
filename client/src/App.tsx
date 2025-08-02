@@ -10,7 +10,7 @@ import { ContactSection } from "./components/Sections/ContactSection";
 
 function App() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen dark:bg-violet-900">
       <Header />
       <main>
         <HeroSection />

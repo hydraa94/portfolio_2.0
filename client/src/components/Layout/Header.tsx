@@ -3,59 +3,38 @@ import ScrambleText from "../UI/ScrambleText";
 
 export const Header = () => {
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="sticky top-0 z-10 bg-violet-50 border-b border-violet-100 dark:bg-blue-900/50 dark:border-blue-800 backdrop-blur backdrop-saturate-150 shadow-lg">
       <Container>
         <nav className="flex items-center justify-between py-4">
-          <div className="text-xl font-bold text-gray-800">
+          {/* Brand / Logo */}
+          <div className="text-xl font-bold">
             <ScrambleText
               texts={["Nailul Autor", "Hydraa"]}
               scrambleSpeed={100}
               holdDuration={2000}
+              className="text-blue-900 dark:text-white"
             />
           </div>
+
+          {/* Navigation */}
           <div className="hidden md:flex space-x-5">
-            <a
-              href="#home"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Home
-            </a>
-            <a
-              href="#about"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              About
-            </a>
-            <a
-              href="#tech-stack"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Skills
-            </a>
-            <a
-              href="#projects"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Projects
-            </a>
-            <a
-              href="#certificates"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Certificates
-            </a>
-            <a
-              href="#github"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              GitHub
-            </a>
-            <a
-              href="#contact"
-              className="text-gray-600 hover:text-gray-900 transition-colors"
-            >
-              Contact
-            </a>
+            {[
+              { href: "#home", label: "Home" },
+              { href: "#about", label: "About" },
+              { href: "#tech-stack", label: "Skills" },
+              { href: "#projects", label: "Projects" },
+              { href: "#certificates", label: "Certificates" },
+              { href: "#github", label: "GitHub" },
+              { href: "#contact", label: "Contact" },
+            ].map(({ href, label }) => (
+              <a
+                key={href}
+                href={href}
+                className="text-blue-900 dark:text-white transition-colors hover:text-blue-700 dark:hover:text-blue-300"
+              >
+                {label}
+              </a>
+            ))}
           </div>
         </nav>
       </Container>

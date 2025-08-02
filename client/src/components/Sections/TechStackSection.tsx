@@ -32,10 +32,12 @@ export const TechStackSection = () => {
   };
 
   return (
-    <section id="tech-stack" className="py-20 bg-white">
+    <section id="tech-stack" className="py-20 bg-gray-50 dark:bg-slate-900">
       <Container>
-        <SectionTitle>Tech Stack & Skills</SectionTitle>
-        <p className="text-center text-gray-600 mb-12 max-w-2xl mx-auto">
+        <SectionTitle className="dark:text-white">
+          Tech Stack & Skills
+        </SectionTitle>
+        <p className="text-center text-gray-600 dark:text-white mb-12 max-w-2xl mx-auto">
           Technologies and tools I work with to bring ideas to life
         </p>
 
