@@ -1,28 +1,26 @@
-import apiIcon from "@assets/icons/api.svg";
-import csharpIcon from "@assets/icons/csharp.svg";
-import css3Icon from "@assets/icons/css3.svg";
-import databaseIcon from "@assets/icons/database.svg";
-import gameSolidIcon from "@assets/icons/game-solid.svg";
-import gameOutlineIcon from "@assets/icons/game-outline.svg";
-import gitIcon from "@assets/icons/git.svg";
-import githubIcon from "@assets/icons/github.svg";
-import html5Icon from "@assets/icons/html5.svg";
-import javascriptIcon from "@assets/icons/javascript.svg";
-import monitorIcon from "@assets/icons/monitor.svg";
-import nodejsIcon from "@assets/icons/nodejs.svg";
-import reactIcon from "@assets/icons/react.svg";
-import tailwindcssIcon from "@assets/icons/tailwindcss.svg";
-import terminalIcon from "@assets/icons/terminal.svg";
-import toolsIcon from "@assets/icons/tools.svg";
-import unityIcon from "@assets/icons/unity.svg";
-import vscodeIcon from "@assets/icons/vscode.svg";
-import firebaseIcon from "@assets/icons/firebase.svg";
-import mysqlIcon from "@assets/icons/mysql.svg";
-import mongoIcon from "@assets/icons/mongo.svg";
-import nextjsIcon from "@assets/icons/nextjs.svg";
+import { PiFileCSharp as csharpIcon } from "react-icons/pi";
+import { SiCss3 as css3Icon } from "react-icons/si";
+import { VscDatabase as databaseIcon } from "react-icons/vsc";
+import { FaGamepad as gameSolidIcon } from "react-icons/fa";
+import { MdSportsEsports as gameOutlineIcon } from "react-icons/md";
+import { SiGit as gitIcon } from "react-icons/si";
+import { FaGithub as githubIcon } from "react-icons/fa";
+import { SiHtml5 as html5Icon } from "react-icons/si";
+import { SiJavascript as javascriptIcon } from "react-icons/si";
+import { HiOutlineDesktopComputer as monitorIcon } from "react-icons/hi";
+import { FaNodeJs as nodejsIcon } from "react-icons/fa";
+import { FaReact as reactIcon } from "react-icons/fa";
+import { SiTailwindcss as tailwindcssIcon } from "react-icons/si";
+import { FaTerminal as terminalIcon } from "react-icons/fa";
+import { FaTools as toolsIcon } from "react-icons/fa";
+import { SiUnity as unityIcon } from "react-icons/si";
+import { VscVscode as vscodeIcon } from "react-icons/vsc";
+import { SiFirebase as firebaseIcon } from "react-icons/si";
+import { SiMysql as mysqlIcon } from "react-icons/si";
+import { SiMongodb as mongoIcon } from "react-icons/si";
+import { SiNextdotjs as nextjsIcon } from "react-icons/si";
 
-export {
-  apiIcon,
+export const icons = {
   csharpIcon,
   css3Icon,
   databaseIcon,
@@ -44,4 +42,4 @@ export {
   mysqlIcon,
   mongoIcon,
   nextjsIcon,
-};
+} as const;

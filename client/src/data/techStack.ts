@@ -1,4 +1,8 @@
-import {
+import { icons } from "@data/icons";
+
+import type { IconType } from "react-icons";
+
+const {
   csharpIcon,
   css3Icon,
   gameOutlineIcon,
@@ -16,11 +20,11 @@ import {
   mysqlIcon,
   mongoIcon,
   nextjsIcon,
-} from "@data/icons";
+} = icons;
 
 export interface TechSkill {
   name: string;
-  icon: string;
+  icon: IconType;
   category: "frontend" | "backend" | "gamedev" | "tools" | "networking";
   proficiency: "beginner" | "intermediate" | "advanced";
 }

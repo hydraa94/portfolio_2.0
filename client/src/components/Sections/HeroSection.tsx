@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return (
     <section
       id="home"
-      className="bg-gradient-to-b from-violet-100 via-white to-white dark:from-blue-900 dark:via-slate-800 dark:to-slate-900 my-full min-h-screen flex items-center"
+      className="bg-gradient-to-b from-violet-100 via-white to-white dark:from-indigo-950 dark:via-slate-800 dark:to-slate-900 my-full min-h-screen flex items-center"
     >
       <Container>
         <div className="text-center">

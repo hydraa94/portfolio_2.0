@@ -18,7 +18,7 @@ export const Button = ({
 
   const variantClasses = {
     primary:
-      "bg-violet-600 dark:bg-violet-600 text-white hover:bg-blue-700 focus:ring-blue-500",
+      "bg-blue-600 dark:bg-blue-600 text-white hover:bg-indigo-700 focus:ring-blue-500",
     secondary: "bg-gray-600 text-white hover:bg-gray-700 focus:ring-gray-500",
     outline:
       "border-2 border-blue-600 text-blue-600 hover:bg-blue-50 focus:ring-blue-500",

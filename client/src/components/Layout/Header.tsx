@@ -3,7 +3,7 @@ import ScrambleText from "../UI/ScrambleText";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-10 bg-violet-50 border-b border-violet-100 dark:bg-blue-900/50 dark:border-blue-800 backdrop-blur backdrop-saturate-150 shadow-lg">
+    <header className="sticky top-0 z-50 bg-violet-50 dark:bg-gray-900/50 backdrop-blur shadow-lg">
       <Container>
         <nav className="flex items-center justify-between py-4">
           {/* Brand / Logo */}

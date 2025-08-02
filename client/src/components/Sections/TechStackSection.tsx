@@ -5,12 +5,6 @@ import { Container } from "../Layout/Container";
 import { SectionTitle } from "../UI/SectionTitle";
 import { TechSkillCard } from "../Cards/TechSkillCard";
 import { techStack, techCategories } from "../../data/techStack";
-import {
-  gameSolidIcon,
-  monitorIcon,
-  databaseIcon,
-  toolsIcon,
-} from "@data/icons";
 
 export const TechStackSection = () => {
   const [activeTab, setActiveTab] =
@@ -23,13 +17,6 @@ export const TechStackSection = () => {
     acc[skill.category].push(skill);
     return acc;
   }, {} as Record<string, typeof techStack>);
-
-  const tabIcons = {
-    gamedev: gameSolidIcon,
-    frontend: monitorIcon,
-    backend: databaseIcon,
-    tools: toolsIcon,
-  };
 
   return (
     <section id="tech-stack" className="py-20 bg-gray-50 dark:bg-slate-900">
@@ -44,9 +31,9 @@ export const TechStackSection = () => {
         {/* Main Container with Tabs */}
         <div className="max-w-5xl mx-auto">
           {/* Tab Navigation */}
-          <div className="bg-white rounded-t-xl shadow-lg border border-gray-200 border-b-0">
+          <div className="bg-white dark:bg-slate-800 rounded-t-xl shadow-lg ">
             <div className="flex flex-wrap justify-center md:justify-start">
-              {Object.entries(techCategories).map(([key, label]) => {
+              {Object.entries(techCategories).map(([key]) => {
                 const categoryKey = key as keyof typeof techCategories;
                 const isActive = activeTab === categoryKey;
                 const hasSkills = groupedSkills[categoryKey]?.length > 0;
@@ -63,15 +50,11 @@ export const TechStackSection = () => {
                       ${
                         isActive
                           ? "border-blue-500 text-blue-600 bg-blue-50"
-                          : "border-transparent text-gray-600 hover:text-gray-800"
+                          : "border-transparent text-gray-600 dark:text-white hover:text-gray-800"
                       }
                     `}
                   >
-                    <img
-                      src={tabIcons[categoryKey]}
-                      alt={label}
-                      className="w-7 h-7"
-                    />
+                    {techCategories[categoryKey]}
                   </button>
                 );
               })}
@@ -82,7 +65,6 @@ export const TechStackSection = () => {
           <div className="bg-white rounded-b-xl shadow-lg border border-gray-200 border-t-0 p-8 min-h-[400px]">
             <div className="mb-6">
               <h3 className="text-2xl font-semibold text-gray-800 text-center flex items-center justify-center gap-3">
-                <img src={tabIcons[activeTab]} className="w-8 h-8" />
                 {techCategories[activeTab]}
               </h3>
               <div className="w-20 h-1 bg-blue-500 mx-auto mt-3 rounded-full"></div>

@@ -7,7 +7,7 @@ interface CertificateCardProps {
 
 export const CertificateCard = ({ certificate }: CertificateCardProps) => {
   return (
-    <div className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border border-gray-100">
+    <div className="bg-white dark: rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border border-gray-100">
       <div className="flex items-start justify-between mb-4">
         <div className="flex-1">
           <h3 className="text-lg font-semibold text-gray-800 mb-1">{certificate.title}</h3>
