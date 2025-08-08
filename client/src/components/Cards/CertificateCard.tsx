@@ -1,41 +1,39 @@
-import type { Certificate } from "../../data/certificates"
-import { Button } from "../UI/Button"
+import type { Certificate } from "../../data/certificates";
 
 interface CertificateCardProps {
-  certificate: Certificate
+  certificate: Certificate;
 }
 
 export const CertificateCard = ({ certificate }: CertificateCardProps) => {
   return (
-    <div className="bg-white dark: rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow border border-gray-100">
-      <div className="flex items-start justify-between mb-4">
-        <div className="flex-1">
-          <h3 className="text-lg font-semibold text-gray-800 mb-1">{certificate.title}</h3>
-          <p className="text-blue-600 font-medium text-sm">{certificate.issuer}</p>
-          <p className="text-gray-500 text-sm">{certificate.date}</p>
+    <div className="relative group rounded-lg shadow-md overflow-hidden">
+      <div className="relative z-10 bg-white dark:bg-gray-800 p-6 transition-transform duration-500 ease-in-out group-hover:translate-y-full h-full">
+        <div className="flex items-start justify-between mb-4">
+          <div className="flex-1">
+            <h3 className="text-lg font-semibold text-gray-800 dark:text-white mb-1">
+              {certificate.title}
+            </h3>
+            <p className="text-blue-600 font-medium text-sm">
+              {certificate.issuer}
+            </p>
+          </div>
+          <h2 className="text-sm text-gray-500 dark:text-gray-300">
+            {certificate.date}
+          </h2>
         </div>
-        <div className="text-3xl">🏆</div>
+
+        <p className="text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          {certificate.description}
+        </p>
       </div>
 
-      <p className="text-gray-600 text-sm mb-4 leading-relaxed">{certificate.description}</p>
-
-      <div className="flex gap-2">
-        {certificate.pdfUrl && (
-          <Button size="sm" variant="primary">
-            View Certificate
-          </Button>
-        )}
-        {certificate.credentialUrl && (
-          <Button size="sm" variant="outline">
-            Verify
-          </Button>
-        )}
-        {!certificate.pdfUrl && !certificate.credentialUrl && (
-          <Button size="sm" variant="outline" disabled>
-            Coming Soon
-          </Button>
-        )}
-      </div>
+      {certificate.image && (
+        <img
+          src={certificate.image}
+          alt={certificate.title}
+          className="absolute inset-0 w-full h-full object-cover z-0"
+        />
+      )}
     </div>
-  )
-}
+  );
+};
