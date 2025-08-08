@@ -9,7 +9,7 @@ export const CertificatesSection = () => {
       id="certificates"
       className="py-20 bg-gray-50 dark:bg-slate-900 flex flex-col items-center justify-center"
     >
-      <Container>
+      <Container className="">
         <SectionTitle className="text-white">
           Certificates & Achievements
         </SectionTitle>
@@ -18,7 +18,7 @@ export const CertificatesSection = () => {
           commitment to continuous growth
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className={`grid grid-cols-2 md:grid-cols-4 gap-2`}>
           {certificates.map((certificate) => (
             <CertificateCard key={certificate.id} certificate={certificate} />
           ))}
