@@ -1,19 +1,23 @@
 import { Container } from "./Container";
-import ScrambleText from "../UI/ScrambleText";
+import DecryptedText from "../UI/DecryptedText";
 
 export const Header = () => {
   return (
-    <header className="sticky top-0 z-50 bg-violet-50 dark:bg-gray-900/50 backdrop-blur shadow-lg">
+    <header className="sticky top-0 z-50 bg-violet-50/80 dark:bg-gray-900/80 backdrop-blur shadow-3xl">
       <Container>
         <nav className="flex items-center justify-between py-4">
           {/* Brand / Logo */}
           <div className="text-xl font-bold">
-            <ScrambleText
-              texts={["Nailul Autor", "Hydraa"]}
-              scrambleSpeed={100}
-              holdDuration={2000}
-              className="text-blue-900 dark:text-white"
-            />
+            {"<"}{" "}
+            <DecryptedText
+              text="Nailul Autor"
+              speed={100}
+              sequential={true}
+              animateOn="view"
+              revealDirection="start"
+              useOriginalCharsOnly={false}
+            />{" "}
+            {"/>"}
           </div>
 
           {/* Navigation */}

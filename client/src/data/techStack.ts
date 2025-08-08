@@ -20,6 +20,10 @@ const {
   mysqlIcon,
   mongoIcon,
   nextjsIcon,
+  monitorIcon,
+  toolsIcon,
+  databaseIcon,
+  gameSolidIcon,
 } = icons;
 
 export interface TechSkill {
@@ -152,4 +156,11 @@ export const techCategories = {
   frontend: "Frontend Development",
   backend: "Backend Development",
   tools: "Development Tools",
+};
+
+export const techCategoryIcons = {
+  gamedev: gameSolidIcon,
+  frontend: monitorIcon,
+  backend: databaseIcon,
+  tools: toolsIcon,
 };

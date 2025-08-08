@@ -4,8 +4,11 @@ import { Avatar } from "../UI/Avatar";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-20 bg-gray-50 dark:bg-slate-900">
-      <Container className="max-w-7xl mx-auto p-14 mb-[100px] rounded-2xl bg-white dark:bg-gray-800 shadow-xl dark:shadow-slate-800 ">
+    <section
+      id="about"
+      className="py-20 bg-gray-50 dark:bg-slate-900 min-h-screen flex flex-col items-center justify-center"
+    >
+      <Container className="max-w-7xl mx-auto p-14 mb-[100px] rounded-2xl bg-white border-gray-400 dark:bg-gray-800 shadow-xl dark:shadow-slate-800 border-[2px] dark:border-gray-600">
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-shrink-0">
             <Avatar
