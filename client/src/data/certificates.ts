@@ -1,12 +1,12 @@
 export interface Certificate {
-  id: string
-  title: string
-  issuer: string
-  date: string
-  description: string
-  pdfUrl?: string
-  credentialUrl?: string
-  image?: string
+  id: string;
+  title: string;
+  issuer: string;
+  date: string;
+  description: string;
+  pdfUrl?: string;
+  credentialUrl?: string;
+  image?: string;
 }
 
 export const certificates: Certificate[] = [
@@ -17,7 +17,7 @@ export const certificates: Certificate[] = [
     date: "2024",
     description:
       "Completed Unity's comprehensive junior programmer pathway covering C# fundamentals, Unity basics, and game development principles.",
-    // pdfUrl will be added later when user provides Google Drive links
+    image: "/public/placeholder.png",
   },
   {
     id: "web-development-basics",
@@ -26,6 +26,6 @@ export const certificates: Certificate[] = [
     date: "2024",
     description:
       "Comprehensive course covering HTML5, CSS3, JavaScript fundamentals and responsive web design principles.",
+    image: "/public/placeholder.png",
   },
-  // Add more certificates as needed
-]
+];
