@@ -13,7 +13,7 @@ import {
 
 export const TechStackSection = () => {
   const [activeTab, setActiveTab] =
-    useState<keyof typeof techCategories>("gamedev");
+    useState<keyof typeof techCategories>("frontend");
 
   const groupedSkills = techStack.reduce((acc, skill) => {
     if (!acc[skill.category]) {
@@ -68,7 +68,7 @@ export const TechStackSection = () => {
                           ${
                             isActive
                               ? "text-black dark:text-black"
-                              : "text-black dark:text-white group-hover:text-gray-800 group-hover:dark:text-blue-500"
+                              : "text-black dark:text-white group-hover:text-gray-800 group-hover:dark:text-gray-700"
                           }
                         `,
                       }}

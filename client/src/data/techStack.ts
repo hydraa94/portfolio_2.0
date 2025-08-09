@@ -3,9 +3,7 @@ import { icons } from "@data/icons";
 import type { IconType } from "react-icons";
 
 const {
-  csharpIcon,
   css3Icon,
-  gameOutlineIcon,
   gitIcon,
   githubIcon,
   html5Icon,
@@ -14,7 +12,6 @@ const {
   reactIcon,
   tailwindcssIcon,
   terminalIcon,
-  unityIcon,
   vscodeIcon,
   firebaseIcon,
   mysqlIcon,
@@ -29,31 +26,11 @@ const {
 export interface TechSkill {
   name: string;
   icon: IconType;
-  category: "frontend" | "backend" | "gamedev" | "tools" | "networking";
+  category: "frontend" | "backend" | "tools";
   proficiency: "beginner" | "intermediate" | "advanced";
 }
 
 export const techStack: TechSkill[] = [
-  // Game Development
-  {
-    name: "Unity",
-    icon: unityIcon,
-    category: "gamedev",
-    proficiency: "beginner",
-  },
-  {
-    name: "C#",
-    icon: csharpIcon,
-    category: "gamedev",
-    proficiency: "beginner",
-  },
-  {
-    name: "Game Design",
-    icon: gameOutlineIcon,
-    category: "gamedev",
-    proficiency: "beginner",
-  },
-
   // Frontend
   {
     name: "HTML5",

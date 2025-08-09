@@ -19,6 +19,9 @@ import { SiFirebase as firebaseIcon } from "react-icons/si";
 import { SiMysql as mysqlIcon } from "react-icons/si";
 import { SiMongodb as mongoIcon } from "react-icons/si";
 import { SiNextdotjs as nextjsIcon } from "react-icons/si";
+import { MdLightMode as lightIcon } from "react-icons/md";
+import { MdDarkMode as darkIcon } from "react-icons/md";
+import { MdComputer as systemIcon } from "react-icons/md";
 
 export const icons = {
   csharpIcon,
@@ -42,4 +45,7 @@ export const icons = {
   mysqlIcon,
   mongoIcon,
   nextjsIcon,
+  lightIcon,
+  darkIcon,
+  systemIcon,
 } as const;

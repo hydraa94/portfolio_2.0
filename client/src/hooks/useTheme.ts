@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-type ThemeMode = "light" | "dark" | "system";
+export type ThemeMode = "light" | "dark" | "system";
 
 export function useTheme() {
   const [mode, setMode] = useState<ThemeMode>(
@@ -21,9 +21,9 @@ export function useTheme() {
     root.classList.remove("dark");
 
     if (theme === "dark") {
-      root.classList.add("dark");
+      root.classList.toggle("dark");
     } else if (theme === "system" && systemPrefDark) {
-      root.classList.add("dark");
+      root.classList.toggle("dark");
     }
 
     localStorage.setItem("theme", theme);

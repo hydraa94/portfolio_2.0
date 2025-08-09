@@ -16,8 +16,6 @@ export const ContactSection = () => {
             href="https://github.com/nailul-autor"
             icon={<span className="text-2xl">📱</span>}
             label="GitHub"
-
-            
           />
           <SocialIcon
             href="https://instagram.com/nailul-autor"
