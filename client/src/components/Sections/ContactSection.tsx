@@ -1,8 +1,11 @@
 import { Container } from "../Layout/Container";
 import { SectionTitle } from "../UI/SectionTitle";
 import { SocialIcon } from "../Cards/SocialIcon";
+import { Icons } from "@/data/icons";
 
 export const ContactSection = () => {
+  const { instagramIcon, githubIcon, linkedInIcon, itchIoIcon } = Icons;
+
   return (
     <section id="contact" className="py-20 bg-gray-50 dark:bg-slate-900">
       <Container>
@@ -11,21 +14,26 @@ export const ContactSection = () => {
           Follow me on my social media accounts to stay updated with my projects
           and activities.
         </p>
-        <div className="flex justify-center gap-8 flex-wrap">
+        <div className="flex justify-center gap-8 flex-wrap text-3xl">
           <SocialIcon
             href="https://github.com/nailul-autor"
-            icon={<span className="text-2xl">📱</span>}
-            label="GitHub"
+            icon={githubIcon.icon}
+            color={githubIcon.color}
           />
           <SocialIcon
             href="https://instagram.com/nailul-autor"
-            icon={<span className="text-2xl">📷</span>}
-            label="Instagram"
+            icon={instagramIcon.icon}
+            color={instagramIcon.color}
           />
           <SocialIcon
             href="https://itch.io/nailul-autor"
-            icon={<span className="text-2xl">🎮</span>}
-            label="Itch.io"
+            icon={itchIoIcon.icon}
+            color={itchIoIcon.color}
+          />
+          <SocialIcon
+            href="https://www.linkedin.com/in/m-nailul-autor"
+            icon={linkedInIcon.icon}
+            color={linkedInIcon.color}
           />
         </div>
       </Container>

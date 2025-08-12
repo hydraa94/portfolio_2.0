@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { IconContext, type IconType } from "react-icons";
 import { useTheme } from "@/hooks/useTheme";
-import { icons } from "@/data/icons";
+import { Icons } from "@/data/icons";
 
 type ThemeMode = "light" | "dark" | "system";
 type Orientation = "up" | "down" | "left" | "right";
@@ -26,17 +26,17 @@ export const ThemeSwitcher = ({
   const [open, setOpen] = useState(false);
 
   const iconMap: Record<ThemeMode, IconType> = {
-    light: icons.lightIcon,
-    dark: icons.darkIcon,
-    system: icons.systemIcon,
+    light: Icons.lightIcon.icon,
+    dark: Icons.darkIcon.icon,
+    system: Icons.systemIcon.icon,
   };
 
   const Icon = icon || iconMap[mode];
 
   const options: { label: string; value: ThemeMode; icon: IconType }[] = [
-    { label: "Light", value: "light", icon: icons.lightIcon },
-    { label: "Dark", value: "dark", icon: icons.darkIcon },
-    { label: "System", value: "system", icon: icons.systemIcon },
+    { label: "Light", value: "light", icon: Icons.lightIcon.icon },
+    { label: "Dark", value: "dark", icon: Icons.darkIcon.icon },
+    { label: "System", value: "system", icon: Icons.systemIcon.icon },
   ];
 
   const orientationClasses: Record<Orientation, string> = {

@@ -43,7 +43,7 @@ export const TechStackSection = () => {
                 const isActive = activeTab === categoryKey;
                 const hasSkills = groupedSkills[categoryKey]?.length > 0;
 
-                const IconComponent = techCategoryIcons[categoryKey];
+                const IconComponent = techCategoryIcons[categoryKey].icon;
 
                 if (!hasSkills) return null;
 

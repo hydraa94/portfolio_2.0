@@ -1,6 +1,4 @@
-import { icons } from "@data/icons";
-
-import type { IconType } from "react-icons";
+import { Icons } from "@data/icons";
 
 const {
   css3Icon,
@@ -21,11 +19,11 @@ const {
   toolsIcon,
   databaseIcon,
   gameSolidIcon,
-} = icons;
+} = Icons;
 
 export interface TechSkill {
   name: string;
-  icon: IconType;
+  icon: Icons;
   category: "frontend" | "backend" | "tools";
   proficiency: "beginner" | "intermediate" | "advanced";
 }

@@ -1,5 +1,6 @@
 import type { TechSkill } from "../../data/techStack";
 import { IconContext } from "react-icons";
+import { useState } from "react";
 
 interface TechSkillCardProps {
   skill: TechSkill;
@@ -13,20 +14,29 @@ export const TechSkillCard = ({ skill }: TechSkillCardProps) => {
     advanced: "bg-green-100 text-green-800 border-green-200",
   };
 
+  const [isHovered, setIsHovered] = useState(false);
   const IconComponent = skill.icon;
 
   return (
-    <div className="group bg-gray-100 dark:bg-slate-600 rounded-lg p-6 hover:bg-gray-50 dark:hover:bg-gray-200 hover:shadow-md transition-all duration-300 hover:-translate-y-1 group">
+    <div
+      className="group bg-gray-200 dark:bg-slate-600 rounded-lg p-6 hover:bg-gray-100 dark:hover:bg-gray-300 hover:shadow-md transition-all duration-300 hover:-translate-y-1 group"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div className="flex flex-col items-center text-center hover:dark:text-gray-900">
         {/* ICON */}
         <div className="flex justify-center items-center mb-4 w-14 h-14 sm:w-16 sm:h-16 group-hover:scale-110 transition-transform duration-300">
           <IconContext.Provider
             value={{
-              className:
-                "w-7 h-7 sm:w-10 sm:h-10 text-gray-900 dark:text-gray-100 group-hover:dark:text-gray-600",
+              className: `w-7 h-7 sm:w-10 sm:h-10 text-gray-900 dark:text-gray-100`,
             }}
           >
-            <IconComponent />
+            <IconComponent.icon
+              style={{
+                color: isHovered ? IconComponent.color : undefined,
+                background: isHovered ? "#00000" : undefined,
+              }}
+            />
           </IconContext.Provider>
         </div>
 

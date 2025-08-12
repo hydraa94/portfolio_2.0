@@ -1,9 +1,20 @@
 import { Container } from "../Layout/Container";
 import { SectionTitle } from "../UI/SectionTitle";
 import { ProjectCard } from "../Cards/ProjectCard";
-import { projects } from "../../data/projects";
+import { type Project } from "../../types/project";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 export const ProjectsSection = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+
+  useEffect(() => {
+    axios
+      .get<Project[]>(import.meta.env.VITE_API_URL + "/projects")
+      .then((res) => setProjects(res.data))
+      .catch((err) => console.error(err));
+  });
+
   return (
     <section
       id="projects"
