@@ -8,7 +8,6 @@ interface ProjectCardProps {
 
 export const ProjectCard = ({ project, className }: ProjectCardProps) => {
   const hasImage = !!project.image;
-  const hasDescription = !!project.description;
 
   const truncateDescription = (text: string, maxLength: number) => {
     if (text.length > maxLength) {
