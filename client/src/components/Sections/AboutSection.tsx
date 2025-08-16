@@ -12,7 +12,7 @@ export const AboutSection = () => {
         <div className="flex flex-col md:flex-row items-center gap-12">
           <div className="flex-shrink-0">
             <Avatar
-              src="https://drive.usercontent.google.com/download?id=1UTmzIQDVbZKY1UaBxgsjpUKyg5b_sNGN"
+              src={"/profile.png"}
               alt="Muhammad Nailul Autor"
               size="xl"
               className="w-48 h-48 border-slate-700"
