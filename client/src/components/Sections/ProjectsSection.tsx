@@ -1,7 +1,7 @@
 import { Container } from "../Layout/Container";
 import { SectionTitle } from "../UI/SectionTitle";
 import { ProjectCard } from "../Cards/ProjectCard";
-import { type Project } from "../../types/project";
+import { type Project, placeholderProjects } from "../../types/project";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import Slider from "react-slick";
@@ -20,13 +20,14 @@ export const ProjectsSection = () => {
 
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
-    slidesToShow: 3, // tampil 3 item sekaligus
+    slidesToShow: 3,
     slidesToScroll: 3,
+    initialSlide: 0,
     responsive: [
       {
-        breakpoint: 1024, // tablet
+        breakpoint: 1080,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -35,7 +36,15 @@ export const ProjectsSection = () => {
         },
       },
       {
-        breakpoint: 720, // mobile
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -61,6 +70,14 @@ export const ProjectsSection = () => {
               className="mx-2 sm:mx-4"
             />
           ))}
+
+          {/* {placeholderProjects.map((project) => (
+            <ProjectCard
+              key={project.id}
+              project={project}
+              className="mx-2 sm:mx-4"
+            />
+          ))} */}
         </Slider>
       </Container>
     </section>
