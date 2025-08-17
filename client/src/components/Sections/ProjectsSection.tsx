@@ -35,7 +35,7 @@ export const ProjectsSection = () => {
         },
       },
       {
-        breakpoint: 640, // mobile
+        breakpoint: 720, // mobile
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -47,13 +47,19 @@ export const ProjectsSection = () => {
   return (
     <section
       id="projects"
-      className="py-20 bg-gray-50 dark:bg-slate-900 min-h-screen items-center justify-center"
+      className="py-20 bg-gray-50 dark:bg-slate-900 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
     >
-      <Container>
-        <SectionTitle className="dark:text-white">Projects</SectionTitle>
-        <Slider {...settings} className="">
+      <Container className="w-full max-w-7xl mx-auto">
+        <SectionTitle className="dark:text-white text-center sm:text-left text-2xl sm:text-3xl mb-8">
+          Projects
+        </SectionTitle>
+        <Slider {...settings} className="px-2 sm:px-6">
           {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} className="mx-5" />
+            <ProjectCard
+              key={project.id}
+              project={project}
+              className="mx-2 sm:mx-4"
+            />
           ))}
         </Slider>
       </Container>
