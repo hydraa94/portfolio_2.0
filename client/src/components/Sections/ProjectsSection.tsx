@@ -22,15 +22,15 @@ export const ProjectsSection = () => {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 3,
-    slidesToScroll: 3,
+    slidesToShow: 1,
+    slidesToScroll: 1,
     initialSlide: 0,
     responsive: [
       {
         breakpoint: 1080,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
           infinite: true,
           dots: true,
         },
@@ -38,9 +38,9 @@ export const ProjectsSection = () => {
       {
         breakpoint: 600,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
         },
       },
       {
@@ -59,25 +59,25 @@ export const ProjectsSection = () => {
       className="py-20 bg-gray-50 dark:bg-slate-900 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
     >
       <Container className="w-full max-w-7xl mx-auto">
-        <SectionTitle className="dark:text-white text-center sm:text-left text-2xl sm:text-3xl mb-8">
+        <SectionTitle className="dark:text-white text-2xl sm:text-3xl mb-8">
           Projects
         </SectionTitle>
         <Slider {...settings} className="px-2 sm:px-6">
-          {projects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              className="mx-2 sm:mx-4"
-            />
-          ))}
-
-          {/* {placeholderProjects.map((project) => (
-            <ProjectCard
-              key={project.id}
-              project={project}
-              className="mx-2 sm:mx-4"
-            />
-          ))} */}
+          {projects
+            ? projects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  className="mx-2 sm:mx-4"
+                />
+              ))
+            : placeholderProjects.map((project) => (
+                <ProjectCard
+                  key={project.id}
+                  project={project}
+                  className="mx-2 sm:mx-4"
+                />
+              ))}
         </Slider>
       </Container>
     </section>
