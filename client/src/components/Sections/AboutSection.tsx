@@ -8,7 +8,7 @@ export const AboutSection = () => {
       id="about"
       className="py-20 bg-gray-50 dark:bg-slate-900 min-h-screen flex flex-col items-center justify-center px-4 sm:px-6 lg:px-8"
     >
-      <Container className="w-full max-w-7xl mx-auto p-6 sm:p-10 md:p-14 mb-16 md:mb-[100px] rounded-2xl bg-white border-gray-400 dark:bg-gray-800 shadow-xl dark:shadow-slate-800 border-[2px] dark:border-gray-600">
+      <Container className="w-full max-w-7xl mx-auto p-6 sm:p-10 md:p-14 mb-16 md:mb-[100px] rounded-2xl bg-white border-gray-400 dark:bg-gray-800 shadow-xl dark:shadow-slate-800 border-[2px] dark:border-gray-600 transform transition-transform duration-00 hover:-translate-y-5 hover:shadow-2xl">
         <div className="flex flex-col md:flex-row items-center md:items-start gap-8 md:gap-12">
           <div className="flex-shrink-0">
             <Avatar
